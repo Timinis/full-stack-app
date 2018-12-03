@@ -9,7 +9,7 @@ require('babel-register');
 require('./src/app.js');
 
 try {
-  require('./src/app.js').start(process.env.PORT);
+  require('./src/app.js').start(process.env.PORT || 3000);
 } catch (e) {
   console.error(e);
 }
