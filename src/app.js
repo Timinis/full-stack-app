@@ -5,17 +5,17 @@
 'use strict';
 
 // Dependencies
+import cors from 'cors';
 import express from 'express';
 import pageRouter from './api/page-router.js';
-import cors from 'cors';
 
 // Start Express
 const app = express();
 
 // Middleware
+app.use(cors());
 app.use(express.json()); // json parser
 app.use(pageRouter);
-app.use(cors());
 
 //--------------------------------------
 //* Start Server
